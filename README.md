@@ -59,12 +59,13 @@ Item de Pedido
 3 - Criar camada de persistencia
 
 4 - Criar endpoints CRUD usando DTOs para as entidades
-4.1 Feature - CRUD Cliente
-4.1.1 criar endpoint para listar clientes
-4.1.2 criar endpoint para pesquisar cliente por ID
-4.1.3 criar endpoint para criar cliente
-4.1.4 criar endpoint para alterar cliente
-4.1.5 criar endpoint para excluir cliente
+
+- 4.1 Feature - CRUD Cliente
+- 4.1.1 criar endpoint para listar clientes
+- 4.1.2 criar endpoint para pesquisar cliente por ID
+- 4.1.3 criar endpoint para criar cliente
+- 4.1.4 criar endpoint para alterar cliente
+- 4.1.5 criar endpoint para excluir cliente
 
 
 
