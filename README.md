@@ -90,5 +90,5 @@ git push --set-upstream origin develop
 
 - https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 - http://h2database.com/html/functions.html
-
+- https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application
 
