@@ -89,5 +89,6 @@ git push --set-upstream origin develop
 ## Referencias
 
 - https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+- http://h2database.com/html/functions.html
 
 
