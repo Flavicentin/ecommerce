@@ -62,6 +62,10 @@ Item de Pedido
 
 - 4.1 Feature - CRUD Cliente
 - 4.1.1 criar endpoint para listar clientes
+```
+git checkout -b feature/listar_cliente
+git push --set-upstream origin feature/listar_cliente
+```
 - 4.1.2 criar endpoint para pesquisar cliente por ID
 - 4.1.3 criar endpoint para criar cliente
 - 4.1.4 criar endpoint para alterar cliente
