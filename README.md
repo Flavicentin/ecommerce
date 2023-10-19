@@ -72,10 +72,6 @@ git push --set-upstream origin feature/listar_cliente
 - 4.1.5 criar endpoint para excluir cliente
 
 
-
-
-
-
 ### Git Flow
 
 - branch develop a partir da master
@@ -84,8 +80,6 @@ git checkout -b develop
 git push --set-upstream origin develop
 ```
 
-
-
 ## Referencias
 
 - https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
@@ -93,4 +87,6 @@ git push --set-upstream origin develop
 - https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application
 - https://www.baeldung.com/java-dto-pattern
 - https://www.baeldung.com/java-instant-to-string
+- https://www.baeldung.com/spring-boot-data-sql-and-schema-sql
+- https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-initialization.using-basic-sql-scripts
 
