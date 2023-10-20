@@ -91,6 +91,7 @@ git push --set-upstream origin develop
 - https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-initialization.using-basic-sql-scripts
 - https://springjava.com/spring-boot/response-entity-in-rest-api-crud-example-spring-boot
 - https://www.baeldung.com/java-optional
+- https://www.baeldung.com/spring-hateoas-tutorial
 
 ## Cursos
 

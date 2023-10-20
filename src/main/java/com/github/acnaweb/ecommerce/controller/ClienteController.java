@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,11 +28,7 @@ public class ClienteController {
 	public ResponseEntity<List<ClienteDTO>> getAll() {
 
 		// mapear/converter cada Cliente -> ClienteDTO
-		List<ClienteDTO> result = 
-				clienteService.getAll()
-				.stream()
-				.map(this::map)
-				.collect(Collectors.toList());
+		List<ClienteDTO> result = clienteService.getAll().stream().map(this::map).collect(Collectors.toList());
 
 		return new ResponseEntity<>(result, HttpStatus.OK);
 	}
@@ -45,6 +42,13 @@ public class ClienteController {
 		ClienteDTO dto = this.map(clienteService.findById(id));
 
 		return new ResponseEntity<>(dto, HttpStatus.OK);
+	}
+
+	@PostMapping
+	public ResponseEntity<ClienteDTO> create(ClienteCreateDTO requestDto) {
+
+		ClienteDTO responseDto = null;
+		return new ResponseEntity<>(responseDto, HttpStatus.CREATED);
 	}
 
 	private ClienteDTO map(Cliente cliente) {
