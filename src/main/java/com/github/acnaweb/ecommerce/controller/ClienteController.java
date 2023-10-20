@@ -1,5 +1,6 @@
 package com.github.acnaweb.ecommerce.controller;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,13 +47,24 @@ public class ClienteController {
 
 	@PostMapping
 	public ResponseEntity<ClienteDTO> create(ClienteCreateDTO requestDto) {
-
-		ClienteDTO responseDto = null;
+		Cliente cliente = map(requestDto);
+		
+		Cliente clienteSaved = clienteService.save(cliente);
+				
+		ClienteDTO responseDto = this.map(clienteSaved);
 		return new ResponseEntity<>(responseDto, HttpStatus.CREATED);
+	}
+
+	private Cliente map(ClienteCreateDTO dto) {
+		Cliente cliente = modelMapper.map(dto, Cliente.class);		
+		cliente.setDataCadastro(Instant.now());		
+		return cliente;
 	}
 
 	private ClienteDTO map(Cliente cliente) {
 		ClienteDTO dto = modelMapper.map(cliente, ClienteDTO.class);
 		return dto;
 	}
+	
+	
 }
