@@ -89,4 +89,9 @@ git push --set-upstream origin develop
 - https://www.baeldung.com/java-instant-to-string
 - https://www.baeldung.com/spring-boot-data-sql-and-schema-sql
 - https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-initialization.using-basic-sql-scripts
+- https://springjava.com/spring-boot/response-entity-in-rest-api-crud-example-spring-boot
+- https://www.baeldung.com/java-optional
 
+## Cursos
+
+- https://www.udemy.com/course/java-optional-in-depth/
