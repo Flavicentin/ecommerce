@@ -4,6 +4,8 @@ import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,18 +48,18 @@ public class ClienteController {
 	}
 
 	@PostMapping
-	public ResponseEntity<ClienteDTO> create(ClienteCreateDTO requestDto) {
+	public ResponseEntity<ClienteDTO> create(@Valid ClienteCreateDTO requestDto) {
 		Cliente cliente = map(requestDto);
-		
+
 		Cliente clienteSaved = clienteService.save(cliente);
-				
+
 		ClienteDTO responseDto = this.map(clienteSaved);
 		return new ResponseEntity<>(responseDto, HttpStatus.CREATED);
 	}
 
 	private Cliente map(ClienteCreateDTO dto) {
-		Cliente cliente = modelMapper.map(dto, Cliente.class);		
-		cliente.setDataCadastro(Instant.now());		
+		Cliente cliente = modelMapper.map(dto, Cliente.class);
+		cliente.setDataCadastro(Instant.now());
 		return cliente;
 	}
 
@@ -65,6 +67,5 @@ public class ClienteController {
 		ClienteDTO dto = modelMapper.map(cliente, ClienteDTO.class);
 		return dto;
 	}
-	
-	
+
 }
